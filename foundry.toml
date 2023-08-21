@@ -1,6 +1,25 @@
 [profile.default]
-src = 'src'
-out = 'out'
-libs = ['lib']
+solc = '/opt/solc'
+solc_version = '0.8.17'
+optimizer = true
+optimizer_runs = 1_000_000
+verbosity = 1
+fs_permissions = [{ access = "read", path = "./"}]
+
+src = 'contracts'
+test = 'test/foundry'
+out = 'foundry-artifacts'
+cache_path  = 'foundry-cache'
+libs = ['node_modules', 'lib']
+bytecode_hash = "none"
+ffi = false
+
+# default is zero, using a non-zero amount enables us to test e.g. billing based on gas prices.
+gas_price = 1
+block_timestamp = 1234567890
+block_number = 12345
+
+
+
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
