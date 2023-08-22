@@ -97,7 +97,6 @@ contract ERC721GatedPaymasterTest is Test {
     ops[0] = op;
     vm.expectRevert(abi.encodeWithSelector(IEntryPoint.FailedOp.selector, 0, "AA34 signature error"));
     entryPoint.handleOps(ops, beneficiary);
-    vm.stopPrank();
   }
 
   function fillUserOp(
