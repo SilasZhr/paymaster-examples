@@ -15,7 +15,7 @@ contract ERC721GatedPaymaster is BasePaymaster {
   using ECDSA for bytes32;
   using UserOperationLib for UserOperation;
 
-  IERC721 private immutable tokenContract;
+  IERC721 public immutable tokenContract;
 
   constructor(IEntryPoint _entryPoint, address _tokenContract) BasePaymaster(_entryPoint) {
     tokenContract = IERC721(_tokenContract);
