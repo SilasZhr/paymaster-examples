@@ -6,7 +6,7 @@ optimizer_runs = 1_000_000
 verbosity = 1
 fs_permissions = [{ access = "read", path = "./"}]
 
-src = 'contracts'
+src = 'src'
 test = 'test/foundry'
 out = 'foundry-artifacts'
 cache_path  = 'foundry-cache'
